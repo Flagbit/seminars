@@ -2108,11 +2108,7 @@ class Tx_Seminars_FrontEnd_DefaultController extends Tx_Oelib_TemplateHelper imp
             ) {
                 $dateToShow = '';
             } else {
-                if ($whatToDisplay == 'other_dates') {
-                    $dateToShow = $this->createSingleViewLink($event, $this->seminar->getDate(), false);
-                } else {
-                    $dateToShow = $currentDate;
-                }
+                $dateToShow = $currentDate;
                 $this->previousDate = $currentDate;
             }
             $this->setMarker('date', $dateToShow);
