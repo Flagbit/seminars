@@ -113,6 +113,10 @@ class Tx_Seminars_FrontEnd_SelectorWidget extends Tx_Seminars_FrontEnd_AbstractV
         $builder->limitToEventTypes(
             GeneralUtility::trimExplode(',', $this->getConfValueString('limitListViewToEventTypes', 's_listView'), true)
         );
+        $builder->setSourcePages(
+            $this->getConfValueString('pages'),
+            $this->getConfValueInteger('recursive')
+        );
         $builder->limitToOrganizers($this->getConfValueString('limitListViewToOrganizers', 's_listView'));
         $builder->limitToCategories($this->getConfValueString('limitListViewToCategories', 's_listView'));
 

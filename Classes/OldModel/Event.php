@@ -4397,6 +4397,7 @@ class Tx_Seminars_OldModel_Event extends Tx_Seminars_OldModel_AbstractTimeSpan
         $builder = GeneralUtility::makeInstance(Tx_Seminars_BagBuilder_Category::class);
         $builder->limitToEvents($this->getTopicUid());
         $builder->sortByRelationOrder();
+        $builder->setSourcePages($this->getPageUid());
         $bag = $builder->build();
 
         $result = [];
