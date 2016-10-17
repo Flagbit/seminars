@@ -1638,7 +1638,6 @@ class Tx_Seminars_FrontEnd_DefaultController extends Tx_Oelib_TemplateHelper imp
 
             // Hides unneeded columns from the list.
             $temporaryHiddenColumns = ['title', 'list_registrations'];
-            $this->hideColumns($temporaryHiddenColumns);
 
             $tableOtherDates = $this->createListTable($seminarBag, 'other_dates');
 
